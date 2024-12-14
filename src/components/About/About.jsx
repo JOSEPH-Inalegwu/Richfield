@@ -3,11 +3,11 @@ import React from 'react'
 export default function About() {
   return (
     <>
-    <div class="relative bg-center bg-cover bg-no-repeat h-[85vh] bg-[url('src/assets/about01.jpg')]">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative z-10 mx-5 md:mx-24 pb-20 flex flex-col items-start justify-end h-full space-y-4">
-        <h2 class="text-white">HOME/ ABOUT</h2>
-        <h1 class="lg:text-5xl md:text-4xl text-4xl text-white font-bold">About Us</h1>
+    <div className="relative bg-center bg-cover bg-no-repeat h-[85vh] bg-[url('src/assets/about01.jpg')]">
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative z-10 mx-5 md:mx-24 pb-20 flex flex-col items-start justify-end h-full space-y-4">
+        <h2 className="text-white">HOME/ ABOUT</h2>
+        <h1 className="lg:text-5xl md:text-4xl text-4xl text-white font-bold">About Us</h1>
         </div>
     </div>
       <div className="py-16 bg-white">
