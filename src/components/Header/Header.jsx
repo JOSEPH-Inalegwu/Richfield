@@ -1,9 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa'; // Import the cart icon
+import { useSelector } from 'react-redux'; // Import useSelector to access the Redux store
 
 const Header = () => {
   const headerRef = useRef(null);
   const [isHidden, setIsHidden] = useState(false);
+  const location = useLocation(); // Get the current location (route)
+  
+  // Get the number of items in the cart from Redux store
+  const cartItems = useSelector((state) => state.cart.items); // Adjust the path according to your store structure
+  const cartItemCount = cartItems.length;
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -33,23 +40,38 @@ const Header = () => {
     transition: 'transform 0.3s ease-in-out',
   };
 
+  // Check if the current route is the products page
+  const isProductsPage = location.pathname === '/product'; // Replace with your actual route
+
   return (
     <header ref={headerRef} style={headerStyle} className="shadow sticky z-50 top-0">
       <nav className="bg-white border-gray-200 px-4 lg:px-24 py-6">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
             <div className="uppercase text-3xl font-bold">
-            Rich<span className='text-green-500'>Field</span>
+              Rich<span className='text-green-500'>Field</span>
             </div>
           </Link>
           <div className="flex items-center lg:order-2">
-            <Link
-              to="#"
-              className="text-white bg-green-500 hover:bg-green-700 
+            {isProductsPage ? (
+              <Link to="/cart" className="relative">
+                <FaShoppingCart size={24} className="text-green-500" />
+                {cartItemCount > 0 && (
+                  <span className="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
+                    {cartItemCount}
+                  </span>
+                )}
+              </Link>
+            ) : (
+              <Link
+                to="#"
+                className="text-white bg-green-500 hover:bg-green-700 
                           focus:ring-4 focus:ring-orange-300 font-medium rounded-sm 
                           text-sm px-6 py-3 mr-2 focus:outline-none"
-            > GET STARTED
-            </Link>
+              >
+                GET STARTED
+              </Link>
+            )}
           </div>
           <div
             className="hidden justify-between items-center w-full lg:flex lg:w-auto 
@@ -66,7 +88,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
                                 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-green-700 lg:p-0
-                                ${isActive ? 'text-green-500' : 'text-gray-400'}`
+                                ${isActive ? 'text-green-500' : 'text-gray-400'}` 
                   }
                 >
                   HOME
@@ -79,7 +101,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
                                 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-green-700 lg:p-0
-                                ${isActive ? 'text-green-500' : 'text-gray-400'}`
+                                ${isActive ? 'text-green-500' : 'text-gray-400'}` 
                   }
                 >
                   ABOUT
@@ -92,7 +114,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
                                 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-green-700 lg:p-0
-                                ${isActive ? 'text-green-500' : 'text-gray-400'}`
+                                ${isActive ? 'text-green-500' : 'text-gray-400'}` 
                   }
                 >
                   PRODUCT
@@ -105,9 +127,10 @@ const Header = () => {
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
                                 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-green-700 lg:p-0
-                                ${isActive ? 'text-green-500' : 'text-gray-400'}`
+                                ${isActive ? 'text-green-500' : 'text-gray-400'}` 
                   }
-                > SERVICE   
+                >
+                  SERVICE
                 </NavLink>
               </li>
 
@@ -117,7 +140,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
                                 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-green-700 lg:p-0
-                                ${isActive ? 'text-green-500' : 'text-gray-400'}`
+                                ${isActive ? 'text-green-500' : 'text-gray-400'}` 
                   }
                 >
                   CONTACT
@@ -132,5 +155,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
