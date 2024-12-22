@@ -53,7 +53,7 @@ const Cart = () => {
                 </td>
                 <td className="p-3 border border-gray-300">{item.name}</td>
                 <td className="p-3 border border-gray-300 text-center">
-                  ${item.priceInCent.toFixed(2)}
+                ₦{item.priceInCent.toFixed(2)}
                 </td>
                 <td className="p-3 border border-gray-300 text-center">
                   <button
@@ -71,7 +71,7 @@ const Cart = () => {
                   </button>
                 </td>
                 <td className="p-3 border border-gray-300 text-center">
-                  ${(item.priceInCent * item.quantity).toFixed(2)}
+                  ₦{(item.priceInCent * item.quantity).toFixed(2)}
                 </td>
                 <td className="p-3 border border-gray-300 text-center">
                   <button
@@ -102,8 +102,8 @@ const Cart = () => {
             />
             <div className="flex-1">
               <h2 className="text-lg font-bold">{item.name}</h2>
-              <p>Unit Price: ${item.priceInCent.toFixed(2)}</p>
-              <p>Total: ${(item.priceInCent * item.quantity).toFixed(2)}</p>
+              <p>Unit Price:  ₦{item.priceInCent.toFixed(2)}</p>
+              <p>Total:  ₦{(item.priceInCent * item.quantity).toFixed(2)}</p>
               <div className="flex items-center mt-2">
                 <button
                   className="px-2 text-white bg-orange-500 rounded"
@@ -134,12 +134,12 @@ const Cart = () => {
       <div className="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
         <button
           className="px-6 py-2 bg-red-500 text-white rounded shadow w-full sm:w-auto"
-          onClick={dispatch(clearCart)}
+          onClick={() => dispatch(clearCart())}
         >
           Clear Cart
         </button>
         <div className="text-lg font-bold text-orange-600">
-          Total ({cartItems.length} items): ${total.toFixed(2)}
+          Total ({cartItems.length} items):  ₦{total.toFixed(2)}
         </div>
         <button className="px-8 py-3 bg-orange-600 text-white rounded shadow w-full sm:w-auto">
           Check Out

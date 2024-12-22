@@ -62,7 +62,7 @@ function ProductCard({
         </div>
 
         <p className='font-bold text-gray-800'>
-          ₦{(priceInCent / 100).toFixed(2)} {/* Format price */}
+          ₦{(priceInCent)} {/* Format price##.toFixed(2) */}
         </p>
       </div>
 

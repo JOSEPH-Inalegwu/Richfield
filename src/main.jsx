@@ -5,6 +5,7 @@ import './index.css';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'; // Import PersistGate
+import ProtectedRoute from './components/ProtectedRoutes/ProtectedRoutes.jsx';
 import { store, persistor } from './redux/store'; // Import Redux store and persistor
 import Layout from './components/Layout.jsx';
 import Home from './components/Home/Home.jsx';
@@ -13,6 +14,11 @@ import Service from './components/Services/Service.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import Product from './components/Products/Product.jsx';
 import Cart from './components/Cart/Cart.jsx';
+import SignUp from './components/SignUp/Signup.jsx';
+import VerifyCode from './components/VerifyCode/VerifyCode.jsx';
+import Login from './components/Login/Login.jsx';
+import ResetPassword from './components/ResetPassword/ResetPassword.jsx';
+import ForgotPassword from './components/ForgottenPassword/ForgottenPassword.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,14 +29,26 @@ const router = createBrowserRouter(
       <Route path="product" element={<Product />} />
       <Route path="contact" element={<Contact />} />
       <Route path="cart" element={<Cart />} />
+      <Route path="signup" element={<SignUp />} />
+      <Route path="login" element={<Login />} />
+      <Route path="reset-password" element={<ResetPassword />} />
+      <Route path="forgotten-password" element={<ForgotPassword />} />
+
+      <Route
+        path="verify"
+        element={
+          <ProtectedRoute tokenKey="verificationToken" redirectTo="/signup">
+            <VerifyCode />
+          </ProtectedRoute>
+        }
+      />
     </Route>
   )
 );
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* Wrap the app with PersistGate */}
       <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
         <RouterProvider router={router} />
       </PersistGate>

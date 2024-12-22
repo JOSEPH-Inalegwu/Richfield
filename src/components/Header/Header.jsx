@@ -64,7 +64,7 @@ const Header = () => {
               </Link>
             ) : (
               <Link
-                to="#"
+                to="/signup"
                 className="text-white bg-green-500 hover:bg-green-700 
                           focus:ring-4 focus:ring-orange-300 font-medium rounded-sm 
                           text-sm px-6 py-3 mr-2 focus:outline-none"

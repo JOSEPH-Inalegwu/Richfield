@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react'
+import PropTypes from 'prop-types';
 
 function Card({name = 'Undefined', image= 'src/assets/no_image.png', text}) {
   return (
@@ -25,5 +26,11 @@ function Card({name = 'Undefined', image= 'src/assets/no_image.png', text}) {
     </>
   )
 }
+
+Card.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  text: PropTypes.string
+};
 
 export default Card
