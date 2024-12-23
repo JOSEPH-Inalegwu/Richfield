@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white border-y mt-24">
+    <footer className="bg-black text-white">
     <div className="w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between lg:mx-20">
             <div className="mb-6 md:mb-0">
@@ -73,7 +73,7 @@ export default function Footer() {
                     className="flex flex-col space-y-2">
                         <input 
                         type="email" 
-                        name="email"s
+                        name="email"
                         placeholder="Signup for our Newsletter"
                         className="px-4 py-2 text-green-600 outline-green-500 rounded-sm"
                         />
