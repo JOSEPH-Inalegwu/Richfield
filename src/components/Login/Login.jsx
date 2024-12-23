@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axiosInstance from "../../api/axiosInstance";
 import axios from "axios";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+    reqUsername: "",
+    reqPwd: "",
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -22,8 +21,11 @@ const Login = () => {
     e.preventDefault();
     setError(""); // Clear previous errors
     try {
-      //axios instance is a file that checks if the refresh token is valid...if it is'nt it requests for a new token
-      const response = await axiosInstance.post("/login", formData);
+      // Send login request to the backend
+      const response = await axios.post(
+        "http://localhost:3500/api/login/login",
+        formData
+      );
 
       const { accessToken } = response.data;
 
@@ -62,8 +64,8 @@ const Login = () => {
               </label>
               <input
                 type="text"
-                name="username"
-                value={formData.username}
+                name="reqUsername" // Updated name attribute
+                value={formData.reqUsername}
                 onChange={handleChange}
                 placeholder="Enter your username"
                 className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -76,8 +78,8 @@ const Login = () => {
               </label>
               <input
                 type="password"
-                name="password"
-                value={formData.password}
+                name="reqPwd" // Updated name attribute
+                value={formData.reqPwd}
                 onChange={handleChange}
                 placeholder="Enter your password"
                 className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
