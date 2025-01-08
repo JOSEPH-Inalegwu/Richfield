@@ -91,6 +91,15 @@ const Login = () => {
               Login
             </button>
           </form>
+          <div className="flex items-center justify-center my-4">
+            <div className="flex items-center w-full">
+              <div className="border-t border-gray-400 flex-grow"></div>
+              <p className="text-sm px-3">Or</p>
+              <div className="border-t border-gray-400 flex-grow"></div>
+            </div>
+
+          </div>
+
           <div className="flex justify-between items-center mt-4">
             <Link
               to="/forgotten-password"

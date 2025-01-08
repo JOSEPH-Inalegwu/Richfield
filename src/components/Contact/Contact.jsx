@@ -12,7 +12,7 @@ function Contact() {
   </div>
 
 
-   <h1 className='font-bold text-3xl mx-5 md:text-center lg:text-left md:mx-24 mt-16 mb-4'
+   <h1 className='font-bold text-slate-800 text-3xl mx-5 md:text-center lg:text-left md:mx-24 mt-16 mb-4'
    >Get in Touch</h1>
      <div className="lg:mx-24 md:mx-6 flex flex-col md:flex-row
         px-6 md:px-0 md:space-x-14">
@@ -22,18 +22,18 @@ function Contact() {
             <div className='flex flex-col space-y-6'>
               <input 
               type="text" 
-              className='border px-6 py-4 outline-none rounded-md hover:shadow-md '
+              className='border px-6 py-4 outline-none rounded-md hover:shadow-md bg-white'
               placeholder='Your Name'
               />
               <input 
               type="email" 
-              className='border px-6 py-4 outline-none rounded-md hover:shadow-md'
+              className='border px-6 py-4 outline-none rounded-md hover:shadow-md bg-white'
               placeholder='Your Email'
               required
               />
               <input 
               type="text" 
-              className='border px-6 py-4 outline-none rounded-md hover:shadow-md'
+              className='border px-6 py-4 outline-none rounded-md hover:shadow-md bg-white'
               placeholder='Subject'
               />
 
@@ -41,7 +41,7 @@ function Contact() {
               placeholder='Message'
               cols="30" 
               rows="5"
-              className='border outline-none px-6 py-4 rounded-md hover:shadow-md'
+              className='border outline-none px-6 py-4 rounded-md hover:shadow-md bg-white'
               ></textarea>
             </div>
           </form>

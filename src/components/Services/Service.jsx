@@ -3,7 +3,7 @@ import React from 'react'
 function Service() {
 
   return (
-    <div className=''>
+    <div className='bg-white/90 border border-slate-800'>
       <div className="relative bg-center bg-cover bg-no-repeat h-[85vh] bg-[url('src/assets/about02.jpg')]">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 mx-5 md:mx-24 pb-20 flex flex-col items-start justify-end h-full space-y-4">
