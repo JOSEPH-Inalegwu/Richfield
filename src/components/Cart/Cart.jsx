@@ -2,7 +2,7 @@ import React from "react";
 import {removeFromCart, clearCart, incrementQuantity, decrementQuantity} from '../../redux/features/cart/cartSlice'; // Adjust path as needed
 
 import { useSelector, useDispatch } from "react-redux";
-// import { FaTrash } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const Cart = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gray-50 shadow-md rounded-lg">
-      <h1 className="text-3xl font-bold text-green-600 mb-6 text-center">
+      <h1 className="text-3xl font-bold text-orange-600 mb-6 text-center">
         Your Cart
       </h1>
 
@@ -57,14 +57,14 @@ const Cart = () => {
                 </td>
                 <td className="p-3 border border-gray-300 text-center">
                   <button
-                    className="px-2 text-white bg-green-500 rounded"
+                    className="px-2 text-white bg-orange-500 rounded"
                     onClick={() => dispatch(decrementQuantity(item.id))}
                   >
                     -
                   </button>
                   <span className="mx-2">{item.quantity}</span>
                   <button
-                    className="px-2 text-white bg-green-500 rounded"
+                    className="px-2 text-white bg-orange-500 rounded"
                     onClick={() => dispatch(incrementQuantity(item.id))}
                   >
                     +
@@ -79,7 +79,7 @@ const Cart = () => {
                     onClick={() => dispatch(removeFromCart(item.id))}
                     
                   >
-                    {/* <FaTrash /> */}
+                    <FaTrash />
                   </button>
                 </td>
               </tr>
@@ -106,7 +106,7 @@ const Cart = () => {
               <p>Total:  ₦{(item.priceInCent * item.quantity).toFixed(2)}</p>
               <div className="flex items-center mt-2">
                 <button
-                  className="px-2 text-white bg-green-500 rounded"
+                  className="px-2 text-white bg-orange-500 rounded"
                   // onClick={() => handleQuantityChange(item.id, -1)}
                 >
                   -
@@ -121,10 +121,10 @@ const Cart = () => {
               </div>
             </div>
             <button
-              className="px-3 py-1 text-white bg-red-600 rounded self-start sm:self-center"
+              className="px-3 py-1 text-white bg-red-500 rounded self-start sm:self-center"
               onClick={() => dispatch(removeFromCart(item.id))}
             >
-              {/* <FaTrash /> */}
+              <FaTrash />
             </button>
           </div>
         ))}
@@ -133,15 +133,15 @@ const Cart = () => {
       {/* Footer actions */}
       <div className="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
         <button
-          className="px-6 py-2 bg-red-600 text-white rounded shadow w-full sm:w-auto"
+          className="px-6 py-2 bg-red-500 text-white rounded shadow w-full sm:w-auto"
           onClick={() => dispatch(clearCart())}
         >
           Clear Cart
         </button>
-        <div className="flex items-center text-base font-bold text-green-600">
-          Total ({cartItems.length} items): <div className="mx-3 text-xl"> ₦{total.toFixed(2)}</div> 
+        <div className="text-lg font-bold text-orange-600">
+          Total ({cartItems.length} items):  ₦{total.toFixed(2)}
         </div>
-        <button className="px-8 py-3 bg-green-600 text-white rounded shadow w-full sm:w-auto">
+        <button className="px-8 py-3 bg-orange-600 text-white rounded shadow w-full sm:w-auto">
           Check Out
         </button>
       </div>

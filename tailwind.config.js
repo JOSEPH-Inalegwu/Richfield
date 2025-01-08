@@ -13,8 +13,6 @@ export default {
       center: true
     }
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [],
 }
 

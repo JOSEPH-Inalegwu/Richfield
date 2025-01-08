@@ -16,10 +16,10 @@ function Card({name = 'Undefined', image= 'src/assets/no_image.png', text}) {
             <div className="flex justify-center items-center">
                 <img src={image} alt="" className="w-40 h-36" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-800"
+            <h3 className="text-2xl font-bold"
             >{name}
             </h3>
-            <p className="max-w-sm text-center text-slate-800
+            <p className="max-w-sm text-center text-darkGrayishBlue
             md:text-left">{text}</p>
         </div>
       </motion.div>
