@@ -167,9 +167,12 @@ const Cart = () => {
                   ₦{(total).toLocaleString('en-NG', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </div> 
               </div>
-              <button className="px-8 py-3 bg-green-600 text-white rounded shadow w-full sm:w-auto">
+              <Link 
+                to=''
+                className="px-8 py-3 bg-green-600 text-white rounded shadow w-full sm:w-auto"
+              >
                 Check Out
-              </button>
+              </Link>
             </div>
           </>
         )}

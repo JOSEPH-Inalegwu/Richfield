@@ -19,6 +19,7 @@ import VerifyCode from './components/VerifyCode/VerifyCode.jsx';
 import Login from './components/Login/Login.jsx';
 import ResetPassword from './components/ResetPassword/ResetPassword.jsx';
 import ForgotPassword from './components/ForgottenPassword/ForgottenPassword.jsx';
+import Checkout from './components/Cart/Checkout/Checkout.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="product" element={<Product />} />
       <Route path="contact" element={<Contact />} />
       <Route path="cart" element={<Cart />} />
+      <Route path='Checkout' element={<Checkout />} />
       <Route path="signup" element={<SignUp />} />
       <Route path="login" element={<Login />} />
       <Route path="reset-password" element={<ResetPassword />} />
