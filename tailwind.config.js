@@ -8,7 +8,11 @@ export default {
     lg: '976px',
     xl: '1440px'
   },
-    extend: {},
+    extend: {
+      colors: {
+        'base-100': '#f0f0f0', 
+      },
+    },
     container: {
       center: true
     }

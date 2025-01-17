@@ -40,8 +40,8 @@ const Header = () => {
     transition: 'transform 0.3s ease-in-out',
   };
 
-  // Check if the current route is the products page
-  const isProductsPage = location.pathname === '/product'; // Replace with your actual route
+// Check if the current route is the products page or the cart page
+  const isProductsPage = location.pathname === '/product' || location.pathname === '/cart' || location.pathname === '/cart/checkout'; // Replace with your actual route
 
   return (
     <header ref={headerRef} style={headerStyle} className="shadow sticky z-50 top-0">
