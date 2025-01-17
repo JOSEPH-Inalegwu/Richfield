@@ -16,9 +16,7 @@ const Cart = () => {
     (sum, item) => sum + item.priceInCent * item.quantity,
     0
   );
-
-  console.log(total)
-
+  
   return (
     <div className="bg-white py-12">
       <div className="max-w-6xl mx-auto p-6 text-slate-600">
