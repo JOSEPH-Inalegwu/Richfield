@@ -41,7 +41,7 @@ const Header = () => {
   };
 
   // Check if the current route is the products page or the cart page
-  const isProductsPage = location.pathname === '/product' || location.pathname === '/cart'; // Replace with your actual route
+  const isProductsPage = location.pathname === '/product' || location.pathname === '/cart' || location.pathname === '/cart/checkout'; // Replace with your actual route
 
   return (
     <header ref={headerRef} style={headerStyle} className="shadow sticky z-50 top-0">

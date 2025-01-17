@@ -168,7 +168,7 @@ const Cart = () => {
                 </div> 
               </div>
               <Link 
-                to=''
+                to='checkout'
                 className="px-8 py-3 bg-green-600 text-white rounded shadow w-full sm:w-auto"
               >
                 Check Out

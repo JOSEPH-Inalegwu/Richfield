@@ -101,7 +101,7 @@ const Checkout = () => {
                 {/* Payment Button */}
               <div className="flex flex-wrap gap-4 mt-8">
                 <button type="button" className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300">Back</button>
-                <button type="button" className="min-w-[150px] px-6 py-3.5 text-sm bg-green-600 text-white rounded-lg hover:bg-green-700">Confirm payment $240</button>
+                <button type="button" className="min-w-[150px] px-6 py-3.5 text-sm bg-green-600 text-white rounded-lg hover:bg-green-700">Confirm payment ₦64,000</button>
               </div>
             </form>
           </div>
@@ -112,77 +112,46 @@ const Checkout = () => {
                 <h2 className="text-xl font-bold text-gray-800">Order Summary</h2>
 
                 <div className="space-y-7 mt-8">
-                  <div className="flex gap-4">
-                    <div className="w-[124px] h-[100px] flex items-center justify-center p-4 shrink-0 bg-white border rounded-lg">
-                      <img src='https://readymadeui.com/images/product10.webp' className="w-full object-contain" />
+                  <div className="flex gap-4"> <div className="w-[120px] h-[120px] flex items-center justify-center p-3 shrink-0 bg-white border rounded-lg">
+                      <img src='/../src/assets/crab.jpg' className="w-full object-contain" />
                     </div>
+                   
 
                     <div className="w-full">
-                      <h3 className="text-sm text-gray-800 font-bold">Naruto: Split Sneakers</h3>
+                      <h3 className="text-sm text-gray-800 font-bold">6kg Spiced Crabs</h3>
                       <ul className="text-xs text-gray-800 space-y-1 mt-2">
-                        <li className="flex flex-wrap gap-4">Size <span className="ml-auto">37</span></li>
-                        <li className="flex flex-wrap gap-4">Quantity <span className="ml-auto">2</span></li>
-                        <li className="flex flex-wrap gap-4">Total Price <span className="ml-auto">$40</span></li>
+                      <li className="flex flex-wrap gap-4">Unit <span className="ml-auto">1</span></li>
+                        <li className="flex flex-wrap gap-4">Quantity <span className="ml-auto">4</span></li>
+                        <li className="flex flex-wrap gap-4">Total Price <span className="ml-auto">₦48,000</span></li>
                       </ul>
                     </div>
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-[124px] h-[100px] flex items-center justify-center p-4 shrink-0 bg-white border rounded-lg">
-                      <img src='https://readymadeui.com/images/product11.webp' className="w-full object-contain" />
+                     <div className="w-[120px] h-[120px] flex items-center justify-center p-3 shrink-0 bg-white border rounded-lg">
+                      <img src='/../src/assets/fruit.png' className="w-full object-contain" />
                     </div>
 
                     <div className="w-full">
-                      <h3 className="text-sm text-gray-800 font-bold">VelvetGlide Boots</h3>
+                      <h3 className="text-sm text-gray-800 font-bold">Fresh Fruits</h3>
                       <ul className="text-xs text-gray-800 space-y-1 mt-2">
-                        <li>Size <span className="float-right">37</span></li>
+                        <li>Unit <span className="float-right">1</span></li>
                         <li>Quantity <span className="float-right">2</span></li>
-                        <li>Total Price <span className="float-right">$40</span></li>
+                        <li>Total Price <span className="float-right">₦10,000</span></li>
                       </ul>
                     </div>
                   </div>
-
                   <div className="flex gap-4">
-                    <div className="w-[124px] h-[100px] flex items-center justify-center p-4 shrink-0 bg-white border rounded-lg">
-                      <img src='https://readymadeui.com/images/product14.webp' className="w-full object-contain" />
+                     <div className="w-[120px] h-[120px] flex items-center justify-center p-3 shrink-0 bg-white border rounded-lg">
+                      <img src='/../src/assets/tomato.jpg' className="w-full object-contain" />
                     </div>
 
                     <div className="w-full">
-                      <h3 className="text-sm text-gray-800 font-bold">Echo Elegance</h3>
+                      <h3 className="text-sm text-gray-800 font-bold">Basket of Tomatoes</h3>
                       <ul className="text-xs text-gray-800 space-y-1 mt-2">
-                        <li>Size <span className="float-right">37</span></li>
+                        <li>Unit <span className="float-right">1</span></li>
                         <li>Quantity <span className="float-right">2</span></li>
-                        <li>Total Price <span className="float-right">$40</span></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="w-[124px] h-[100px] flex items-center justify-center p-4 shrink-0 bg-white border rounded-lg">
-                      <img src='https://readymadeui.com/images/product12.webp' className="w-full object-contain" />
-                    </div>
-
-                    <div className="w-full">
-                      <h3 className="text-sm text-gray-800 font-bold">Naruto: Split Sneakers</h3>
-                      <ul className="text-xs text-gray-800 space-y-1 mt-2">
-                        <li className="flex flex-wrap gap-4">Size <span className="ml-auto">37</span></li>
-                        <li className="flex flex-wrap gap-4">Quantity <span className="ml-auto">2</span></li>
-                        <li className="flex flex-wrap gap-4">Total Price <span className="ml-auto">$40</span></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="w-[124px] h-[100px] flex items-center justify-center p-4 shrink-0 bg-white border rounded-lg">
-                      <img src='https://readymadeui.com/images/product9.webp' className="w-full object-contain" />
-                    </div>
-
-                    <div className="w-full">
-                      <h3 className="text-sm text-gray-800 font-bold">VelvetGlide Boots</h3>
-                      <ul className="text-xs text-gray-800 space-y-1 mt-2">
-                        <li>Size <span className="float-right">37</span></li>
-                        <li>Quantity <span className="float-right">2</span></li>
-                        <li>Total Price <span className="float-right">$40</span></li>
+                        <li>Total Price <span className="float-right">₦6,000</span></li>
                       </ul>
                     </div>
                   </div>
@@ -190,7 +159,7 @@ const Checkout = () => {
               </div>
 
               <div className="lg:absolute lg:left-0 lg:bottom-0 bg-green-200 w-full p-4">
-                <h4 className="flex flex-wrap gap-4 text-gray-800 font-bold">Total <span className="ml-auto">$240.00</span></h4>
+                <h4 className="flex flex-wrap gap-4 text-gray-800 font-bold">Total <span className="ml-auto">₦64,000</span></h4>
               </div>
             </div>
           </div>
